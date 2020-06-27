@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    RED
+        .nodes
+        .registerType('template-config', {
+            category: 'config',
+            defaults: {
+                name: {
+                    value: ""
+                }
+            },
+            label: function () {
+                if (this.name) {
+                    return this.name;
+                }
+                return "Config";
+            }
+
+        });
+</script>
+
+<script type="text/x-red" data-template-name="template-config">
+
+    <div class="form-row">
+        <label for="node-config-input-name" style="width:160px !important">
+            <i class="fa fa-user"></i>
+            <span>Name:</span></label>
+        <input type="text" id="node-config-input-name" placeholder="" style="width:280px !important">
+    </div>
+    <hr/>
+    <div class="form-tips">     
+        <i class="fas fa-exclamation"></i>
+            <b>IMPORTANT:</b> Tip.                      
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="template-config">
+   
+</script>
